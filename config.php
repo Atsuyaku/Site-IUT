@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-				<?php require_once('./templates/head.php');?>
 	<head>
 		<title>Projet SIN</title>
+		<?php require_once('./templates/head.php');?>
 	</head>
-	<?php require_once('./templates/head.php');?>
 	<body>
 		<header>
 			<h1>Configuration</h1>
@@ -24,7 +23,7 @@
 			<section>
 
 			</section>
-			</div>
+		</div>
 
 		<footer>
 			<h5>Site développé en 2016/2017 par des élèves de Terminale STI2D SIN: Mediavilla, Beaubestre, Bonnet, Magueur, Baqué </h5>
