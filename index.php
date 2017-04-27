@@ -29,10 +29,10 @@
 			</ul>
 		</div>
 		<div class="inscription">
-			<p><a href="...">Inscription</a></p>
+			<p><a href="./users/register.html">Inscription</a></p>
 		</div>
 		<div class="connexion">
-			<p><a href="...">Connection</a></p>
+			<p><a href="./users/login.html">Connection</a></p>
 		</div>
 		<footer>
 			<h5>Site développé en 2016/2017 par des élèves de Terminale STI2D SIN: Mediavilla, Beaubestre, Bonnet, Magueur, Baqué </h5>

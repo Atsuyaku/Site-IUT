@@ -16,7 +16,7 @@
 			<h1>Statistiques</h1>
 		</header>
 		<nav>
-			<nav><?php require_once('templates/nav.php');?></nav>
+			<?php require_once('templates/nav.php');?>
 		</nav>
 		<div class="bordure">
 			<section>
