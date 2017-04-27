@@ -1,0 +1,146 @@
+@font-face {
+	font-family: "Sansita";
+	src: url("../font/Sansita-Regular.ttf");
+}
+
+html{
+	height: 100%;
+	background: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: rgb(100, 190, 212);
+}
+
+header {
+	margin-top:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-radius: 0px 0px 50px 50px;
+	background-color: #FFFFFF;
+	letter-spacing: 1px;
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+	z-index: 2;
+	width: 103%;
+  transform: translateX(-1.6%);
+}
+
+header h1 {
+	padding-top:5px;
+	padding-bottom:5px;
+	font: normal 2em "Sansita", Georgia, "Times New Roman", Times, serif;
+	color: #0476E8;
+}
+
+#text{
+	position: relative;
+	border-style: double;
+	margin-top:15px;
+	border-color: #66ccff;
+	border-width: 5px;
+	border-radius: 3px;
+	font-size: 1.5em;
+	font-family: cursive;
+	margin-top: 10%;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	width: 100%;
+	min-height: 100%;
+	text-align: center;
+	font: 1.2em Verdana, Arial, Helvetica, sans-serif;
+}
+
+.inscription a  {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background:url("../img/background/boutonnoir.png") no-repeat;
+color:white;
+text-decoration:none;
+float:left;
+margin:2px;
+margin-top: 196px;
+margin-left: 430px;
+}
+.inscription a:hover {
+background:url("../img/background/boutonnoir2.png") no-repeat;
+}
+.connexion a  {
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background:url("../img/background/boutonnoir.png") no-repeat;
+color:white;
+text-decoration:none;
+float:left;
+margin:2px;
+margin-top: 196px;
+}
+.connexion a:hover {
+background:url("../img/background/boutonnoir2.png") no-repeat;
+}
+
+
+@media (min-width: 768px) {
+  body{
+    width: 750px;
+    background-color: rgba(120, 120, 120, 0.25);
+  }
+  @media screen and (device-aspect-ratio: 4/3), screen and (device-aspect-ratio: 16/9)  {
+    html{
+      background-image: url("../img/background/background.jpg");
+    }
+		header{
+			background-image: url("../img/background/head.jpg");
+			background-size: cover;
+			border: 3px ridge;
+			border-color: rgba(0, 0, 0, 0.75);
+				}
+		body{
+			border-width: 0px 10px;
+			border-style: solid;
+			border-color: rgba(50, 50, 50, 0.25);
+		}
+		section{
+		}
+  }
+}
+@media (min-width: 992px) {
+  body{width: 970px}
+}
+@media (min-width: 1200px){
+  body{width: 1170px}
+}
+@media (orientation: portrait){
+  	  body{width: 100% !important}
+  	  }
+
+footer{
+	z-index: 2;
+	position: absolute;
+	bottom: 0;
+	padding-top:2px;
+	border-radius: 50px 50px 0px 0px;
+	background-image: url("../img/background/footer.jpg");
+	width: 103%;
+	transform: translateX(-1.6%);
+	letter-spacing: 1px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom: 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 15px;
+}
