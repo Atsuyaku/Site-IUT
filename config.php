@@ -5,6 +5,13 @@
 		<?php require_once('./templates/head.php');?>
 	</head>
 	<body>
+		<?php
+			session_start();
+			if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
+					header('Location: ./index.php');
+				exit();
+			}
+		?>
 		<header>
 			<h1>Configuration</h1>
 		</header>

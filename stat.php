@@ -5,11 +5,18 @@
 	<?php require_once('./templates/head.php');?>
 	</head>
 	<body>
+		<?php
+			session_start();
+			if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
+					header('Location: ./index.php');
+				exit();
+			}
+		?>
 		<header>
 			<h1>Statistiques</h1>
 		</header>
 		<nav>
-			<nav><?php require_once('templates/nav.php');?></nav>
+			<?php require_once('templates/nav.php');?>
 		</nav>
 		<div class="bordure">
 			<section>
