@@ -29,7 +29,7 @@
 			</ul>
 		</div>
 		<div class="inscription">
-			<p><a href="./users/register.html">Inscription</a></p>
+			<p><a href="./users/login.html">Inscription</a></p>
 		</div>
 		<div class="connexion">
 			<p><a href="./users/login.html">Connection</a></p>

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./src/css/style.css" />
 <link rel="stylesheet" href="./src/css/menu.css" />
 
-<script src="./src/js/jquery-3.1.1.min.js"></script>
+<script src="./src/js/jquery.min.js"></script>
 <script src="./src/js/jquery.nicescroll.js"></script>
 
 

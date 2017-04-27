@@ -1,24 +1,18 @@
 <?php
 
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password=""; // Mysql password 
-$db_name="smart house"; // Database name 
-$tbl_name="users"; // Table name 
+$host="localhost"; // Host name
+$username="root"; // Mysql username
+$password=""; // Mysql password
+$db_name="smart house"; // Database name
+$tbl_name="users"; // Table name
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
-if(empty($_POST)){
-	header('Location: ./login.html');
-	echo "Unknown Error!";
-	exit();
-}
-
-// username and password sent from form 
+// username and password sent from form
 $username=$_POST['username'];
-$password=$_POST['password']; 
+$password=$_POST['password'];
 
 // To protect MySQL injection (more detail about MySQL injection)
 $username = stripslashes($username);
@@ -36,11 +30,8 @@ if($count==1){
 	session_start();
 	$_SESSION['loggedin'] = true;
 	$_SESSION['username'] = $username;
-	
-	header('Location: ../index.php');
-	exit();
+
+	die(header("location:../index.php"));
 } else{
-	header('Location: ./login.html');
-	echo "Unknown Error!";
-	exit();
+	die(header("location:./login.html"));
 }
