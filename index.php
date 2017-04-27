@@ -14,7 +14,12 @@
 			</section>
 		</div>
 		<nav>
-			<?php require_once('./templates/nav.php');?>
+			<?php
+				session_start();
+				if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+					require_once('./templates/nav.php');
+				}
+			?>
 		</nav>
 		<div id="text">
 			<ul>
@@ -34,4 +39,3 @@
 		</footer>
 	</body>
 </html>
-
