@@ -12,12 +12,6 @@ $userName = $_POST['username'];
 $password =  $_POST['password'];
 $query = "INSERT INTO users (username,password) VALUES ('$userName','$password')";
 $data = mysql_query ($query)or die(mysql_error());
-if($data)
-{
-	header('Location: ./login.html');
 
-	exit();
-} else
-{
-	header('Location: ./login.html');
-}
+if($data) { die(header("location: ./login.html'")); }
+else { die(header("location: ./index.php")); }
