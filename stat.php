@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Projet SIN</title>
-	<?php require_once('./templates/head.php');?>
+		<?php require_once('./templates/head.php');?>
 	</head>
 	<body>
 		<?php session_start();if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {die(header("location: ./index.php"));}?>
