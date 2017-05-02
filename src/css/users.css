@@ -57,7 +57,7 @@
 
 .login-page {
 	width: 360px;
-	padding: 8% 0 0;
+	padding: 5.5% 0 0;
 	margin: auto;
 }
 .form {
@@ -65,7 +65,7 @@
 	z-index: 1;
 	background: #FFFFFF;
 	max-width: 360px;
-	margin: 0 auto 100px;
+	margin: 0 auto;
 	padding: 45px;
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -75,23 +75,23 @@
 	outline: 0;
 	background: #f2f2f2;
 	width: 100%;
-	border: 0;
+  border: 1px solid#4C50AF;
 	margin: 0 0 15px;
 	padding: 15px;
 	box-sizing: border-box;
 	font-size: 14px;
 }
-/*.form input:invalid {
+.register-form input:invalid {
 	border: 1px solid red;
-}*/
-.form input:valid {
+}
+.register-form input:valid {
 	border: 1px solid green;
 }
 .form button {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
 	outline: 0;
-	background: #4CAF50;
+	background: #4C50AF;
 	width: 100%;
 	border: 0;
 	padding: 15px;
@@ -102,7 +102,7 @@
 	cursor: pointer;
 }
 .form button:hover,.form button:active,.form button:focus {
-	background: #43A047;
+	background: #4347A0;
 }
 .form .message {
 	margin: 15px 0 0;
@@ -110,7 +110,7 @@
 	font-size: 12px;
 }
 .form .message a {
-	color: #4CAF50;
+	color: #4C50AF;
 	text-decoration: none;
 }
 .form .register-form {
@@ -150,15 +150,43 @@
 	color: #EF3B3A;
 }
 body {
-	background: #76b852; /* fallback for old browsers */
-	background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-	background: -moz-linear-gradient(right, #76b852, #8DC26F);
-	background: -o-linear-gradient(right, #76b852, #8DC26F);
-	background: linear-gradient(to left, #76b852, #8DC26F);
+  background: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #5276b8; /* fallback for old browsers */
+	background-color: -webkit-linear-gradient(right, #5276b8, #6F8DC2);
+	background-color: -moz-linear-gradient(right, #5276b8, #6F8DC2);
+	background-color: -o-linear-gradient(right, #5276b8, #6F8DC2);
+	background-color: linear-gradient(to left, #5276b8, #6F8DC2);
+  background-image: url('../img/background/background.jpg');
 	font-family: "Roboto", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 h3{
 	color: #555
+}
+
+.modalDialog{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:  rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > div{
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
 }

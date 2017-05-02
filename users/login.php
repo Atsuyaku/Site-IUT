@@ -4,7 +4,7 @@ $host="localhost";
 $username="root";
 $password="";
 $db_name="smart house";
-$tbl_name="users"; 
+$tbl_name="users";
 
 mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
@@ -12,10 +12,6 @@ mysql_select_db("$db_name")or die("cannot select DB");
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-$username = stripslashes($username);
-$password = stripslashes($password);
-$username = mysql_real_escape_string($username);
-$password = mysql_real_escape_string($password);
 $sql="SELECT * FROM $tbl_name WHERE username='$username' and password='$password'";
 $result=mysql_query($sql);
 
@@ -27,6 +23,4 @@ if($count==1){
 	$_SESSION['username'] = $username;
 
 	die(header("location:../index.php"));
-} else{
-	die(header("location:./login.html"));
-}
+} else{die(header("location:./login.html?return=1"));}
