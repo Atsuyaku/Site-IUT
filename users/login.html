@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../src/css/users.css" />
+		<link rel="stylesheet" href="../src/css/sweetalert.css" />
+		<script src="../src/js/sweetalert-dev.js"></script>
+		<script src="../src/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="login-page">
+			<div class="form">
+				<h3>Welcome Home</h3>
+				<img src="../src/img/users/pigeon.png" width="230px"/>
+				<form class="register-form" method="post" action="./register.php">
+					<input pattern=".{4,}" type="text" name="username" placeholder="username" required/>
+					<input	pattern=".{3,}" type="password" name="password" placeholder="password" required/>
+					<button>create</button>
+					<p class="message">Already registered? <a href="#">Sign In</a></p>
+				</form>
+				<form class="login-form" method="post" action="./login.php">
+					<input type="text" name="username" placeholder="Username" required/>
+					<input type="password" name="password" placeholder="Password" required/>
+					<button>login</button>
+					<p class="message">Not registered? <a href="#">Create an account</a></p>
+				</form>
+			</div>
+		</div>
+		<script>
+			$('.message a').click(function(){
+				 $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+			});
+		</script>
+		<script>
+			var log = getUrlVars()["return"];
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+					vars[key] = value;
+				});
+				return vars;
+			}
+			if(log==1){
+				swal({
+					title: "Erreur",
+					text: "Identifiant ou mot de passe incorecte",
+					type: "error",
+					timer: 3000,
+				  showConfirmButton: false
+				})
+			}
+			if(log==2) {
+				swal({
+					title: "Attention",
+					text: "Cet identifiant est déjà utilisé",
+					type: "warning",
+					timer: 3000,
+				  showConfirmButton: false
+				})
+			}
+			if(log==3){
+				swal({
+					title: "Félicitation",
+					text: "Votre compte a été crée avec success",
+					type: "success",
+					timer: 3000,
+					showConfirmButton: false
+				})
+			}
+		</script>
+	</body>
+</html>
