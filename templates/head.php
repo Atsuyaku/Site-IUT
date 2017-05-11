@@ -9,6 +9,14 @@
 <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
 <script src="./src/js/liquidFillGauge.js" language="JavaScript"></script>
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
+<script src="./src/gauge/code/highcharts.js"></script>
+<script src="./src/gauge/code/highcharts-more.js"></script>
+<script src="./src/gauge/code/modules/solid-gauge.js"></script>
+
 <script>
 	$(document).ready(function() {$("html").niceScroll({scrollspeed: 150});});
 </script>

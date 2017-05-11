@@ -15,9 +15,10 @@
 		<div class="bordure">
 			<section>
 				<div class="temperature">
-					<?php require_once('./templates/diagram.php');?>
+					<?php require_once('./templates/temp.php');?>
 				</div>
 				<div class="luminosite">
+					<?php require_once('./src\gauge\examples\gauge-solid/lum.php');?>
 				</div>
 			</section>
 		</div>

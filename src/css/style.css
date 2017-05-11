@@ -127,6 +127,34 @@ background:url("../img/background/boutonnoir2.png") no-repeat;
   	  body{width: 100% !important}
   	  }
 
+.temperature{
+	position: relative;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20%;
+	border-style: solid;
+	border-radius: 0px 15px 15px 250px;
+	width: 49%;
+	border-color:#189bff;
+	background-color: #70a3db;
+}
+.luminosite{
+	position: relative;
+	float: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20%;
+	border-style: solid;
+	border-radius: 15px 250px 0px 15px;
+	width: 49%;
+	border-color:#189bff;
+	background-color: #70a3db;
+	height: 250px;
+}
+.highcharts-yaxis-grid .highcharts-grid-line {
+display: none;
+}
 footer{
 	z-index: 2;
 	position: absolute;
